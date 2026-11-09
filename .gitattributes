@@ -1,0 +1,12 @@
+# 强制文本文件用 LF。
+# 这些文件会被打包发到 npm / 被别人 clone，CRLF 会让 diff 和脚本都变味。
+* text=auto eol=lf
+
+# Windows 上跑的批处理需要 CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# 二进制
+*.png binary
+*.jpg binary
+*.tgz binary
