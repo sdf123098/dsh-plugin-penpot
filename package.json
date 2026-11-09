@@ -1,0 +1,60 @@
+{
+  "name": "dsh-plugin-penpot",
+  "version": "0.6.0",
+  "description": "把 Penpot 接进 DSH：三种连接目标 + REST 读写通道（不用浏览器也能改设计稿）。",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "files": [
+    "src",
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "penpot",
+    "mcp",
+    "design",
+    "penpot-mcp"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-tools": ">=0.2.1-rc.1 <0.3.0-0"
+  },
+  "scripts": {
+    "test": "node --test",
+    "test:live": "node --test test/live.test.js"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdf123098/dsh-plugin-penpot.git"
+  },
+  "homepage": "https://github.com/sdf123098/dsh-plugin-penpot#readme",
+  "bugs": {
+    "url": "https://github.com/sdf123098/dsh-plugin-penpot/issues"
+  },
+  "author": "sdf123098"
+}

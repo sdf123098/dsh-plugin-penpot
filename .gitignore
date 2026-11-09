@@ -1,0 +1,28 @@
+# 依赖
+node_modules/
+
+# npm 产物
+*.tgz
+npm-debug.log*
+package-lock.json
+pnpm-lock.yaml
+
+# 运行时数据（插件写到 ~/.dsh/data/dsh-plugin-penpot/，但开发时可能在仓库里留了副本）
+data/
+*.log
+
+# 测试产物
+coverage/
+.nyc_output/
+
+# 编辑器 / 系统
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# 本地备份（凭据脱敏后仍不该进仓库）
+*.bak
+*.bak-*
+*.before-*

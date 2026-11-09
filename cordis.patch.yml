@@ -1,0 +1,16 @@
+# dsh-plugin-penpot bundle patch
+#
+# 一行宿主插件。配置项全部可选，默认值见 src/config.js。
+# 首次加载时会扫描本机已有的 penpot MCP 配置并自动判定连接目标（mode: auto）。
+- insert:
+    - id: penpot
+      name: 'dsh-plugin-penpot'
+      config:
+        # auto = 首启扫描本机 MCP 配置自动判定（推荐）；也可写死 official / local / selfhost
+        mode: auto
+        # auto = 插件加载后自动启动/建连；lazy = 首次调用才启动，之后常驻
+        startup: lazy
+        # 需要完全访问权限的写操作（在设计稿里执行代码、写本地文件）走 DSH 审批
+        requireApproval: true
+        # 是否注册 penpot_control 逃生口（关掉更省上下文）
+        exposeControlTool: true
